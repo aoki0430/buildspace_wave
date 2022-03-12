@@ -1,21 +1,11 @@
 require("@nomiclabs/hardhat-waffle");
 
-// This is a sample Hardhat task. To learn how to create your own go to
-// https://hardhat.org/guides/create-task.html
-task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
-  const accounts = await hre.ethers.getSigners();
-
-  for (const account of accounts) {
-    console.log(account.address);
-  }
-});
-
-// You need to export an object to set up your config
-// Go to https://hardhat.org/config/ to learn more
-
-/**
- * @type import('hardhat/config').HardhatUserConfig
- */
 module.exports = {
-  solidity: "0.8.4",
+  solidity: "0.8.0",
+  networks: {
+    rinkeby: {
+      url: "hgGF7qhp4F0g8hD8I3SsTT4VmQa9_GTV",
+      accounts: ["d803f96b289b4c0079610fd56ede4172aee8b64d49dab729be7259b33b7e2045"]
+    },
+  },
 };
